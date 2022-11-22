@@ -1,0 +1,12 @@
+
+
+- [x] Create repository
+- [x] Create ReadMe
+- [x] Create road map
+- [ ] Create base code
+- [ ] Test and troubleshoot 
+- [ ] Tweak coding as errors are found
+- [ ] Continue testing until errors are resolved
+- [ ] Create visual modifications to make the process more appealing
+- [ ] Review and finalize code
+- [ ] Ensure all changes have been committed to the repository
