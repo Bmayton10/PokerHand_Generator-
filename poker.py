@@ -16,5 +16,40 @@ test_hands = [
     ["AS", "10S", "QS", "KS", "JS"],
 ]
 
-def suit(card):
+def suit(card): # This function defines the suit of a card. 
     return card[-1] 
+
+def value(card):    # This function defines the value of each card.
+    if card [0] =="A":
+        return 14
+    if card [0] =="K":
+        return 13
+    if card [0] =="Q":
+        return 12
+    if card [0] =='J':
+        return 11
+    return int(card[0:-1])
+
+def is_flush(cards): # This function defines a 5 card flush.
+        return all([suit(card) == suit(cards[0])] for card in cards[1:]])
+
+def hand_dist(cards):
+    dist = {i:0 for i in range(1,15)}
+    for card in cards:
+        dist[value(card)] += 1
+    dist[1] = dist[14] # The Ace is given lowest and highest 
+    return dist
+
+def straight_high_card(cards): # This function defines a 5 card straight.
+  dist = hand_dist(cards)
+  for value in range(1, 11):
+    if all([dist[value + k] == 1 for k in range(5)]):
+      return value + 4
+
+
+      
+  
+
+
+
+    
